@@ -54,7 +54,7 @@ export function iniciarDepoimentos(): void {
 
   /**
    * O swipe do dedo também move os indicadores. Deduzimos o slide pela posição
-   * de rolagem — no desktop dois cards ficam visíveis ao mesmo tempo, e aí
+   * de rolagem. No desktop dois cards ficam visíveis ao mesmo tempo, e aí
    * "quem está mais perto da borda esquerda" é a única leitura que não oscila.
    */
   const sincronizar = (): void => {

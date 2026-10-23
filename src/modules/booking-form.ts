@@ -1,6 +1,6 @@
 /**
  * Formulário de agendamento: valida os campos e abre o WhatsApp com a
- * mensagem já escrita. Não há backend — o contato acontece na conversa.
+ * mensagem já escrita. Não há backend: o contato acontece na conversa.
  */
 
 import { SAUDACAO_WHATSAPP, WHATSAPP, whatsappConfigurado } from '../config';
@@ -111,7 +111,7 @@ export function iniciarFormulario(): void {
     limparAviso();
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(montarMensagem(dados))}`, '_blank', 'noopener');
 
-    sucesso.textContent = 'Pronto! Abrimos o WhatsApp com os seus dados — é só enviar a mensagem.';
+    sucesso.textContent = 'Pronto! Abrimos o WhatsApp com os seus dados. É só enviar a mensagem.';
     sucesso.hidden = false;
     formulario.reset();
   });

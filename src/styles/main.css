@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ──────────────────────────────────────────────────────────────
-   Design tokens — derivados da imagem de referência do layout.
+   Design tokens derivados da imagem de referência do layout.
    No Tailwind v4 o tema é declarado aqui; não existe tailwind.config.js.
    ────────────────────────────────────────────────────────────── */
 @theme {
@@ -87,7 +87,7 @@
     }
   }
 
-  /* Botão pílula escuro com a setinha num quadrado claro — assinatura do layout */
+  /* Botão pílula escuro com a setinha num quadrado claro, assinatura do layout */
   .btn-pill {
     display: inline-flex;
     align-items: center;
