@@ -8,7 +8,8 @@ marcado com `[colchetes]` no `index.html`. Procure por `[` com Ctrl+F.
 - Nome, nome completo e o monograma TT da marca
 - Telefone e WhatsApp: (83) 98884-9429
 - Instagram: [@taisatamarafisio_](https://www.instagram.com/taisatamarafisio_/)
-- 17 anos de experiência
+- Experiência: o site mostra "15+ anos". A bio do Instagram dela diz 17 anos,
+  caso um dia queira trocar
 - As cinco áreas de atuação: fisioterapia para atletas, traumato-ortopedia,
   cirurgias faciais, reabilitação funcional e Conceito Mulligan
 - Texto do "Quem é Taisa Tamara" e as etiquetas
