@@ -1,19 +1,19 @@
 /**
  * Único lugar do site que o JavaScript lê para funcionar.
- * Tudo que é só texto fica em index.html, marcado com [colchetes].
+ * Tudo que é só texto fica em index.html.
  */
 
 /**
  * Número de WhatsApp no formato internacional, só dígitos:
- * 55 (Brasil) + DDD + número. Ex.: 5511987654321
+ * 55 (Brasil) + DDD + número.
  *
- * Enquanto estiver com o valor abaixo, o formulário avisa em vez de abrir
- * um link quebrado, e os botões de WhatsApp do site continuam sem destino.
+ * Se algum dia voltar a ficar vazio ou fora desse formato, o formulário avisa
+ * em vez de abrir um link quebrado.
  */
-export const WHATSAPP = '[55DDDNUMERO]';
+export const WHATSAPP = '5583988849429';
 
 /** Saudação que abre a mensagem enviada pelo formulário. */
 export const SAUDACAO_WHATSAPP = 'Olá! Gostaria de agendar uma consulta de fisioterapia.';
 
-/** true quando o número já foi preenchido de verdade. */
+/** true quando o número está num formato que o wa.me aceita. */
 export const whatsappConfigurado = (): boolean => /^\d{12,13}$/.test(WHATSAPP);

@@ -1,85 +1,54 @@
-# O que preencher antes de publicar
+# O que ainda falta preencher
 
-Tudo que está entre `[colchetes]` é provisório. A lista abaixo cobre **todos**
-os pontos, na ordem em que aparecem no site.
+A maior parte do site já está com os dados reais da Taisa. O que sobrou está
+marcado com `[colchetes]` no `index.html` — procure por `[` com Ctrl+F.
 
----
+## Já preenchido ✅
 
-## 1. O único ajuste em código: `src/config.ts`
+- Nome, nome completo e o monograma TT da marca
+- Telefone e WhatsApp: (83) 98884-9429
+- Instagram: [@taisatamarafisio_](https://www.instagram.com/taisatamarafisio_/)
+- Áreas de atuação: Fisioterapia Esportiva, Reabilitação Funcional,
+  Traumato-Ortopédica e Conceito Mulligan
+- Texto do "Quem é Taisa Tamara" e as etiquetas (Paraibana, 15+ anos,
+  Comunicativa, Pratica musculação)
+- As duas fotos dela (topo da página e seção Sobre)
 
-```ts
-export const WHATSAPP = '[55DDDNUMERO]';
-```
+O botão "Agendar consulta" já funciona: abre o WhatsApp dela com os dados
+do formulário escritos na mensagem.
 
-Troque por **55 + DDD + número, só dígitos** — por exemplo `5511987654321`.
+## Falta ⬜
 
-Esse é o passo mais importante: enquanto ele não for feito, o formulário avisa
-em vez de abrir o WhatsApp. Depois de preenchido, **todos** os botões de WhatsApp
-do site (topo, rodapé e barra fixa do celular) passam a funcionar automaticamente.
+### 1. CREFITO — aparece 2 vezes
+`[CREFITO 00000-F]`, no cabeçalho e no rodapé. É o registro profissional;
+num site de saúde ele pesa bastante na confiança de quem não conhece.
 
----
+### 2. E-mail
+`[email@exemplo.com]`, no rodapé.
 
-## 2. Textos em `index.html`
+### 3. Cidade e endereço do consultório
+- `[Cidade/UF]` — aparece no título da aba e no texto de compartilhamento
+- `[Rua Exemplo, 000 — Sala 00]`, `[Bairro — Cidade/UF]`, `[CEP 00000-000]`
+- `[Link do Google Maps]` — abra o Maps, ache o consultório, Compartilhar → Copiar link
 
-Abra o arquivo e procure pelos colchetes (`Ctrl+F` por `[`).
+Se ela atende em mais de um lugar, ou só a domicílio, me avise que eu ajusto
+a seção — hoje ela pressupõe um endereço fixo.
 
-### Cabeçalho e rodapé
-| Placeholder | O que colocar |
-|---|---|
-| `[Nome da Fisioterapeuta]` | Nome como ela quer ser chamada (aparece em 3 lugares) |
-| `[CREFITO 00000-F]` | Número de registro profissional |
-| `[Telefone / WhatsApp]` | Telefone visível no topo |
-| `[+5500000000000]` | Mesmo telefone em formato de link `tel:` |
-| `[email@exemplo.com]` | E-mail de contato (aparece 2 vezes) |
+### 4. Horários de atendimento
+`[08h — 18h]`, `[08h — 12h]`, `[Fechado]` — os valores atuais são chute.
 
-### Topo da página (hero)
-| Placeholder | O que colocar |
-|---|---|
-| `[Subtítulo: ...]` | 1 ou 2 linhas sobre o atendimento |
-| `[+1.000 pacientes atendidos]` | Prova social real — ou apague o bloco se ainda não houver |
+### 5. Depoimentos — os 3
+`[Depoimento 1/2/3]`, `[Nome do Paciente]` e `[Tratamento realizado]`.
 
-### Serviços
-Os três cards já vêm com Terapia Manual, Reabilitação de Lesões e Alívio da Dor
-Crônica. Troque os títulos e as descrições entre colchetes pelos serviços que ela
-realmente oferece.
+Peça autorização por escrito antes de publicar o nome de um paciente. E prefira
+depoimento específico: "voltei a subir escada em 6 semanas" convence muito mais
+que "excelente profissional". Se ainda não tiver nenhum, me avise — é melhor
+tirar a seção do ar do que deixá-la com texto de exemplo.
 
-### Sobre
-| Placeholder | O que colocar |
-|---|---|
-| `[X]+` | Anos de experiência |
-| `[Parágrafo institucional: ...]` | Quem ela é e como trabalha |
-| `[Segundo parágrafo: ...]` | Formação, especializações, quem ela atende |
-| `[+1.000]` / `[0X]` | Números dos dois selos |
-
-### Processo
-As três etapas já estão escritas. Ajuste as descrições ao jeito dela atender.
-
-### Depoimentos
-`[Depoimento 1/2/3]`, `[Nome do Paciente 1/2/3]` e `[Tratamento realizado — Cidade]`.
-Peça autorização antes de publicar o nome de um paciente. Depoimentos específicos
-("voltei a subir escada em 6 semanas") convencem muito mais que elogios genéricos.
-
-### Rodapé
-Endereço completo, `[Link do Google Maps]`, horários de atendimento,
-`[Link do Instagram]` e `[Link do Facebook]`.
-
----
-
-## 3. Dados de compartilhamento (topo do `index.html`)
-
-Ficam dentro do `<head>` e definem o que aparece quando o link é mandado no
-WhatsApp ou no Instagram:
-
-- `<title>` e `<meta name="description">`
-- `og:title`, `og:description`
-- `og:image` — uma imagem de **1200 × 630 px**
-
----
-
-## 4. Fotos
-
-Veja [public/imagens/LEIA-ME.md](public/imagens/LEIA-ME.md) — lista cada foto,
-a proporção certa e como trocar o bloco cinza-verde pela imagem real.
+### 6. Imagem de compartilhamento
+`[URL da imagem de compartilhamento — 1200x630px]` — é a miniatura que aparece
+quando o link é mandado no WhatsApp ou no Instagram. Sem ela, o link vai sem
+imagem nenhuma. Veja [public/imagens/LEIA-ME.md](public/imagens/LEIA-ME.md).
 
 ---
 
@@ -90,13 +59,16 @@ npm install
 npm run dev
 ```
 
-Abra o endereço que aparecer no terminal (normalmente `http://localhost:5173`).
-A página recarrega sozinha a cada alteração salva.
+Para abrir no celular, na mesma rede Wi-Fi:
 
-Para gerar a versão final, pronta para subir em qualquer hospedagem:
+```bash
+npm run dev -- --host
+```
+
+Para gerar a versão final, pronta para publicar:
 
 ```bash
 npm run build
 ```
 
-Os arquivos ficam na pasta `dist/`.
+Os arquivos ficam em `dist/`.
