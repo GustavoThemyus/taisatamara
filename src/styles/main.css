@@ -5,23 +5,25 @@
    No Tailwind v4 o tema é declarado aqui; não existe tailwind.config.js.
    ────────────────────────────────────────────────────────────── */
 @theme {
-  --color-forest: #16331a;
-  --color-forest-deep: #0f2412;
-  --color-forest-soft: #214a28;
-  --color-sage: #8fbf7a;
-  --color-sage-soft: #c9dfb8;
-  --color-mist: #f2f6ee;
+  --color-lagoon: #0b5563;
+  --color-lagoon-deep: #083f4b;
+  --color-lagoon-soft: #13697a;
+  --color-aqua: #5fe0d6;
+  --color-aqua-soft: #c3ece8;
+  /* acento para texto sobre fundo claro; o aqua vivo não tem contraste sobre branco */
+  --color-turq: #0a7f89;
+  --color-mist: #eef8f8;
   --color-paper: #ffffff;
-  --color-ink: #14201a;
-  --color-ink-muted: #5b6b5f;
+  --color-ink: #0f2226;
+  --color-ink-muted: #4f6a70;
 
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
   --radius-card: 1.5rem;
   --radius-field: 0.75rem;
 
-  --shadow-soft: 0 18px 50px -24px rgb(22 51 26 / 0.35);
-  --shadow-float: 0 24px 60px -20px rgb(22 51 26 / 0.45);
+  --shadow-soft: 0 18px 50px -24px rgb(8 63 75 / 0.35);
+  --shadow-float: 0 24px 60px -20px rgb(8 63 75 / 0.45);
 }
 
 @layer base {
@@ -52,7 +54,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-sage);
+    outline: 2px solid var(--color-aqua);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -95,7 +97,7 @@
     min-height: 2.75rem;
     padding: 0.5rem 0.5rem 0.5rem 1.25rem;
     border-radius: 9999px;
-    background-color: var(--color-forest);
+    background-color: var(--color-lagoon);
     color: var(--color-paper);
     font-size: 0.875rem;
     font-weight: 600;
@@ -103,7 +105,7 @@
   }
 
   .btn-pill:hover {
-    background-color: var(--color-forest-deep);
+    background-color: var(--color-lagoon-deep);
   }
 
   .btn-pill:active {
@@ -116,8 +118,8 @@
     width: 1.75rem;
     height: 1.75rem;
     border-radius: 9999px;
-    background-color: var(--color-sage);
-    color: var(--color-forest);
+    background-color: var(--color-aqua);
+    color: var(--color-lagoon);
   }
 
   .btn-solid {
@@ -128,7 +130,7 @@
     min-height: 3.25rem;
     padding-inline: 1.5rem;
     border-radius: var(--radius-field);
-    background-color: var(--color-forest);
+    background-color: var(--color-lagoon);
     color: var(--color-paper);
     font-size: 1rem;
     font-weight: 700;
@@ -136,7 +138,7 @@
   }
 
   .btn-solid:hover {
-    background-color: var(--color-forest-deep);
+    background-color: var(--color-lagoon-deep);
   }
 
   .btn-solid:active {
@@ -155,7 +157,7 @@
     width: 100%;
     min-height: 2.875rem;
     padding: 0.625rem 0.875rem;
-    border: 1px solid #dfe6da;
+    border: 1px solid #d5e6e8;
     border-radius: var(--radius-field);
     background-color: var(--color-mist);
     color: var(--color-ink);
@@ -163,11 +165,11 @@
   }
 
   .field-input::placeholder {
-    color: #9aa89d;
+    color: #7f989d;
   }
 
   .field-input:focus {
-    border-color: var(--color-sage);
+    border-color: var(--color-aqua);
     background-color: var(--color-paper);
   }
 
@@ -184,8 +186,8 @@
     overflow: hidden;
     border-radius: var(--radius-card);
     background-image:
-      linear-gradient(135deg, var(--color-sage-soft) 0%, var(--color-mist) 55%, #e4efdb 100%);
-    color: var(--color-forest);
+      linear-gradient(135deg, var(--color-aqua-soft) 0%, var(--color-mist) 55%, #dcf2f0 100%);
+    color: var(--color-lagoon);
     text-align: center;
   }
 
@@ -235,13 +237,13 @@
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 9999px;
-    background-color: var(--color-sage-soft);
+    background-color: var(--color-aqua-soft);
     transition: width 200ms ease, background-color 200ms ease;
   }
 
   .dot-hit[aria-current="true"] .dot {
     width: 1.5rem;
-    background-color: var(--color-forest);
+    background-color: var(--color-lagoon);
   }
 }
 
