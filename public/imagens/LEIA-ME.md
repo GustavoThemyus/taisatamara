@@ -4,11 +4,13 @@
 
 | Arquivo | Onde aparece | Tamanho original |
 |---|---|---|
-| `taisa-hero.webp` | Topo da página, ao lado do formulário | 412 × 541 |
-| `taisa-sobre.webp` | Seção "Quem é Taisa Tamara" | 609 × 584 |
+| `taisa-hero.webp` | Topo da página, ao lado do formulário | 800 × 746 |
+| `taisa-sobre.webp` | Seção "Quem é Taisa Tamara" | 900 × 768 |
 
-As duas vieram das fotos enviadas, convertidas para WebP (9 KB e 13 KB) e
-exibidas no tamanho original, sem ampliar, para não perder nitidez.
+As duas são as fotos em tamanho original da referência, em WebP (26 KB e 21 KB).
+O formato de arco é feito por CSS (`rounded-t-full` na `<img>`), então qualquer
+foto nova com fundo liso entra no mesmo formato. Para a foto encher o arco sem
+distorcer, ela é cortada no centro numa proporção de 4 por 5 (`object-cover`).
 
 ## O que ainda falta
 
