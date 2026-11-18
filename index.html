@@ -17,11 +17,19 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/src/styles/main.css" />
 </head>
 <body>
+
+  <!-- Logo da Taisa: duas folhas, usadas no cabeçalho e no rodapé -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false">
+    <symbol id="folhas" viewBox="0 0 32 32">
+      <path fill="currentColor" d="M15.2 28.5C9.6 26.4 6.2 21.4 6.4 15c.1-3.6 1.4-7.3 3.6-10.5 2.6 3.6 4.6 7.8 5.6 12.2.8 3.9.6 8-.4 11.8Z" opacity=".9" />
+      <path fill="currentColor" d="M17 28.6c.7-4.2 2.4-8.1 5-11.1 2.1-2.5 4.8-4.3 7.6-5.2-.1 4.3-1.4 8.4-4 11.6-2.2 2.7-5.3 4.4-8.6 4.7Z" opacity=".65" />
+    </symbol>
+  </svg>
 
   <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-paper focus:px-4 focus:py-2 focus:font-semibold focus:text-lagoon">
     Pular para o conteúdo
@@ -31,18 +39,11 @@
   <header id="cabecalho" class="sticky top-0 z-50 bg-lagoon transition-shadow duration-300">
     <div class="container-site flex h-16 items-center justify-between gap-4 md:h-20">
 
-      <a href="#inicio" class="flex items-center gap-2.5 text-paper">
-        <!-- Monograma: um traço horizontal com duas hastes de alturas diferentes, as iniciais TT -->
-        <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-aqua text-lagoon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="currentColor" class="h-5 w-5">
-            <rect x="4" y="7" width="24" height="3.6" rx="1.8" />
-            <rect x="8.4" y="7" width="3.6" height="12" rx="1.8" />
-            <rect x="20" y="7" width="3.6" height="18" rx="1.8" />
-          </svg>
-        </span>
-        <span class="flex min-w-0 max-w-[11rem] flex-col leading-tight sm:max-w-none">
-          <span class="truncate text-sm font-extrabold tracking-tight sm:text-base md:text-lg">Taisa Tamara</span>
-          <span class="truncate text-[11px] font-medium text-aqua-soft">Fisioterapeuta, [CREFITO 00000-F]</span>
+      <a href="#inicio" class="marca" aria-label="Taisa Tamara, Fisioterapia Avançada">
+        <svg class="marca__folhas" aria-hidden="true"><use href="#folhas" /></svg>
+        <span>
+          <span class="marca__nome">Taisa Tamara</span>
+          <span class="marca__sub">Fisioterapia avançada</span>
         </span>
       </a>
 
@@ -120,7 +121,7 @@
       <div class="container-site relative">
 
         <div class="grid gap-5 lg:grid-cols-12 lg:items-end lg:gap-10">
-          <h1 class="order-1 text-[2.1rem] font-extrabold leading-[1.08] text-paper sm:text-5xl lg:order-2 lg:col-span-8 lg:text-[4.2rem]">
+          <h1 class="order-1 text-[2.1rem] font-normal leading-[1.12] text-paper sm:text-5xl lg:order-2 lg:col-span-8 lg:text-[3.6rem]">
             Recupere sua mobilidade<br class="hidden sm:block" />
             e viva <span class="text-aqua">sem dor.</span>
           </h1>
@@ -140,7 +141,7 @@
 
           <!-- Formulário de agendamento rápido -->
           <div id="agendar" class="rounded-card bg-paper p-5 shadow-float sm:p-6 lg:col-span-5">
-            <h2 class="text-lg font-extrabold text-ink">Agende sua consulta</h2>
+            <h2 class="text-lg font-normal text-ink">Agende sua consulta</h2>
             <p class="mt-1 text-xs text-ink-muted">O envio abre o WhatsApp para confirmar o horário.</p>
 
             <form data-booking-form novalidate class="mt-4 space-y-3.5">
@@ -203,7 +204,7 @@
 
       <div class="container-site relative">
         <div class="flex flex-wrap items-end justify-between gap-4">
-          <h2 id="titulo-servicos" class="reveal max-w-xl text-3xl font-extrabold text-ink sm:text-4xl lg:text-5xl">
+          <h2 id="titulo-servicos" class="reveal max-w-xl text-3xl font-normal text-ink sm:text-4xl lg:text-5xl">
             Áreas de <span class="text-turq">atuação</span>
           </h2>
           <a href="#agendar" class="btn-pill reveal">
@@ -226,7 +227,7 @@
                 <path d="M3 10h4" />
               </svg>
             </span>
-            <h3 class="mt-5 text-lg font-extrabold leading-snug text-ink">Fisioterapia para atletas</h3>
+            <h3 class="mt-5 text-lg font-normal leading-snug text-ink">Fisioterapia para atletas</h3>
             <p class="mt-2 text-sm leading-relaxed text-ink-muted">
               Atendimento especializado para quem treina e compete. Prevenção de lesões,
               tratamento e retorno ao esporte.
@@ -243,7 +244,7 @@
                 <circle cx="16.9" cy="9" r="2.2" />
               </svg>
             </span>
-            <h3 class="mt-5 text-lg font-extrabold leading-snug text-ink">Traumato-ortopedia</h3>
+            <h3 class="mt-5 text-lg font-normal leading-snug text-ink">Traumato-ortopedia</h3>
             <p class="mt-2 text-sm leading-relaxed text-ink-muted">
               Tratamento de lesões musculoesqueléticas, pós-operatório ortopédico e
               dores articulares, da coluna aos membros.
@@ -258,7 +259,7 @@
                 <path d="M19.5 7.5a4.2 4.2 0 0 1 0 7.4" />
               </svg>
             </span>
-            <h3 class="mt-5 text-lg font-extrabold leading-snug text-ink">Cirurgias faciais</h3>
+            <h3 class="mt-5 text-lg font-normal leading-snug text-ink">Cirurgias faciais</h3>
             <p class="mt-2 text-sm leading-relaxed text-ink-muted">
               Acompanhamento no pós-operatório de cirurgias do rosto, com foco no controle
               do inchaço e na recuperação dos movimentos.
@@ -273,7 +274,7 @@
                 <circle cx="12" cy="18" r="1.8" />
               </svg>
             </span>
-            <h3 class="mt-5 text-lg font-extrabold leading-snug text-ink">Reabilitação funcional</h3>
+            <h3 class="mt-5 text-lg font-normal leading-snug text-ink">Reabilitação funcional</h3>
             <p class="mt-2 text-sm leading-relaxed text-ink-muted">
               Recuperação do movimento aplicada ao que você faz no dia a dia, para
               devolver força, equilíbrio e autonomia.
@@ -288,7 +289,7 @@
                 <path d="M15 11V7a1.5 1.5 0 0 1 3 0v7a6 6 0 0 1-6 6 6 6 0 0 1-5-2.7l-2.1-3.2a1.6 1.6 0 0 1 2.6-1.9L9 14.2" />
               </svg>
             </span>
-            <h3 class="mt-5 text-lg font-extrabold leading-snug text-ink">Conceito Mulligan</h3>
+            <h3 class="mt-5 text-lg font-normal leading-snug text-ink">Conceito Mulligan</h3>
             <p class="mt-2 text-sm leading-relaxed text-ink-muted">
               Mobilização manual aplicada junto com o movimento ativo, para recuperar a
               amplitude articular sem provocar dor.
@@ -302,26 +303,99 @@
     <section id="tratamentos" aria-labelledby="titulo-tratamentos" class="bg-mist py-14 md:py-20">
       <div class="container-site">
         <div class="max-w-2xl">
-          <h2 id="titulo-tratamentos" class="reveal text-3xl font-extrabold text-ink sm:text-4xl lg:text-5xl">
+          <h2 id="titulo-tratamentos" class="reveal text-3xl font-normal text-ink sm:text-4xl lg:text-5xl">
             Onde <span class="text-turq">dói?</span>
           </h2>
           <p class="reveal mt-4 text-[0.95rem] leading-relaxed text-ink-muted">
-            Toque na região para ver como é o tratamento.
+            Escolha a região do corpo ou a situação para ver como é o tratamento.
           </p>
         </div>
 
-        <ul class="reveal mt-6 flex flex-wrap gap-2.5 md:mt-8" aria-label="Regiões do corpo">
-          <li><a class="chip-regiao" href="#trat-coluna" data-abre="coluna">Cervical</a></li>
-          <li><a class="chip-regiao" href="#trat-ombro" data-abre="ombro">Ombro</a></li>
-          <li><a class="chip-regiao" href="#trat-coluna" data-abre="coluna">Coluna</a></li>
-          <li><a class="chip-regiao" href="#trat-fraturas" data-abre="fraturas">Punho</a></li>
-          <li><a class="chip-regiao" href="#trat-esporte" data-abre="esporte">Coxa (adutor)</a></li>
-          <li><a class="chip-regiao" href="#trat-joelho" data-abre="joelho">Joelho (LCA)</a></li>
-          <li><a class="chip-regiao" href="#trat-fraturas" data-abre="fraturas">Tornozelo</a></li>
-          <li><a class="chip-regiao chip-regiao--extra" href="https://wa.me/5583988849429" data-wa-texto="Olá! Não encontrei o meu caso no site e gostaria de conversar sobre ele.">Não achou o seu caso?</a></li>
-        </ul>
+        <div class="mt-8 grid gap-8 md:mt-12 lg:grid-cols-12 lg:items-center lg:gap-10">
+          <div class="mapa-corpo reveal mx-auto w-full max-w-[17rem] sm:max-w-[20rem] lg:col-span-5 lg:max-w-[24rem]" data-mapa data-corpo-todo="false">
+            <svg viewBox="0 0 360 560" aria-hidden="true" focusable="false">
+              <defs>
+                <radialGradient id="brilho-corpo" cx="50%" cy="50%" r="50%">
+                  <stop offset="0" stop-color="#5fe0d6" stop-opacity=".42" />
+                  <stop offset="1" stop-color="#5fe0d6" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <ellipse cx="180" cy="290" rx="172" ry="272" fill="url(#brilho-corpo)" />
+              <g transform="translate(60 0)">
+                <path class="corpo__fundo" d="M129 62 C129.2 64.7 128.5 73.8 130.0 78.0 C131.5 82.2 134.0 84.8 138.0 87.0 C142.0 89.2 149.0 89.0 154.0 91.0 C159.0 93.0 164.3 95.5 168.0 99.0 C171.7 102.5 174.0 104.8 176.0 112.0 C178.0 119.2 178.7 131.3 180.0 142.0 C181.3 152.7 182.7 165.3 184.0 176.0 C185.3 186.7 186.3 195.7 188.0 206.0 C189.7 216.3 192.2 228.7 194.0 238.0 C195.8 247.3 197.2 254.7 199.0 262.0 C200.8 269.3 203.7 275.7 205.0 282.0 C206.3 288.3 207.8 296.0 207.0 300.0 C206.2 304.0 202.0 307.3 200.0 306.0 C198.0 304.7 196.7 298.3 195.0 292.0 C193.3 285.7 191.8 277.0 190.0 268.0 C188.2 259.0 186.2 248.0 184.0 238.0 C181.8 228.0 179.3 219.0 177.0 208.0 C174.7 197.0 172.3 183.7 170.0 172.0 C167.7 160.3 165.2 146.0 163.0 138.0 C160.8 130.0 158.0 126.3 157.0 124.0 C156.3 128.3 154.2 141.0 153.0 150.0 C151.8 159.0 151.2 167.3 150.0 178.0 C148.8 188.7 145.7 201.3 146.0 214.0 C146.3 226.7 150.0 242.7 152.0 254.0 C154.0 265.3 157.0 269.3 158.0 282.0 C159.0 294.7 158.7 315.0 158.0 330.0 C157.3 345.0 155.2 360.7 154.0 372.0 C152.8 383.3 151.5 389.3 151.0 398.0 C150.5 406.7 150.7 415.0 151.0 424.0 C151.3 433.0 153.3 442.0 153.0 452.0 C152.7 462.0 150.3 475.0 149.0 484.0 C147.7 493.0 145.3 499.3 145.0 506.0 C144.7 512.7 146.2 518.3 147.0 524.0 C147.8 529.7 151.3 536.3 150.0 540.0 C148.7 543.7 142.2 546.0 139.0 546.0 C135.8 546.0 132.3 544.3 131.0 540.0 C129.7 535.7 131.0 526.3 131.0 520.0 C131.0 513.7 131.0 510.3 131.0 502.0 C131.0 493.7 131.5 480.3 131.0 470.0 C130.5 459.7 128.3 452.0 128.0 440.0 C127.7 428.0 129.0 412.7 129.0 398.0 C129.0 383.3 128.7 366.0 128.0 352.0 C127.3 338.0 126.3 324.3 125.0 314.0 C123.7 303.7 120.8 294.0 120.0 290.0 C119.2 294.0 116.3 303.7 115.0 314.0 C113.7 324.3 112.7 338.0 112.0 352.0 C111.3 366.0 111.0 383.3 111.0 398.0 C111.0 412.7 112.3 428.0 112.0 440.0 C111.7 452.0 109.5 459.7 109.0 470.0 C108.5 480.3 109.0 493.7 109.0 502.0 C109.0 510.3 109.0 513.7 109.0 520.0 C109.0 526.3 110.3 535.7 109.0 540.0 C107.7 544.3 104.2 546.0 101.0 546.0 C97.8 546.0 91.3 543.7 90.0 540.0 C88.7 536.3 92.2 529.7 93.0 524.0 C93.8 518.3 95.3 512.7 95.0 506.0 C94.7 499.3 92.3 493.0 91.0 484.0 C89.7 475.0 87.3 462.0 87.0 452.0 C86.7 442.0 88.7 433.0 89.0 424.0 C89.3 415.0 89.5 406.7 89.0 398.0 C88.5 389.3 87.2 383.3 86.0 372.0 C84.8 360.7 82.7 345.0 82.0 330.0 C81.3 315.0 81.0 294.7 82.0 282.0 C83.0 269.3 86.0 265.3 88.0 254.0 C90.0 242.7 93.7 226.7 94.0 214.0 C94.3 201.3 91.2 188.7 90.0 178.0 C88.8 167.3 88.2 159.0 87.0 150.0 C85.8 141.0 83.7 128.3 83.0 124.0 C82.0 126.3 79.2 130.0 77.0 138.0 C74.8 146.0 72.3 160.3 70.0 172.0 C67.7 183.7 65.3 197.0 63.0 208.0 C60.7 219.0 58.2 228.0 56.0 238.0 C53.8 248.0 51.8 259.0 50.0 268.0 C48.2 277.0 46.7 285.7 45.0 292.0 C43.3 298.3 42.0 304.7 40.0 306.0 C38.0 307.3 33.8 304.0 33.0 300.0 C32.2 296.0 33.7 288.3 35.0 282.0 C36.3 275.7 39.2 269.3 41.0 262.0 C42.8 254.7 44.2 247.3 46.0 238.0 C47.8 228.7 50.3 216.3 52.0 206.0 C53.7 195.7 54.7 186.7 56.0 176.0 C57.3 165.3 58.7 152.7 60.0 142.0 C61.3 131.3 62.0 119.2 64.0 112.0 C66.0 104.8 68.3 102.5 72.0 99.0 C75.7 95.5 81.0 93.0 86.0 91.0 C91.0 89.0 98.0 89.2 102.0 87.0 C106.0 84.8 108.5 82.2 110.0 78.0 C111.5 73.8 110.8 64.7 111.0 62.0 Z" />
+                <ellipse class="corpo__fundo" cx="120" cy="40" rx="19" ry="24" />
+                <ellipse class="corpo__linha" cx="120" cy="40" rx="19" ry="24" />
+                <path class="corpo__linha" d="M129 62 C129.2 64.7 128.5 73.8 130.0 78.0 C131.5 82.2 134.0 84.8 138.0 87.0 C142.0 89.2 149.0 89.0 154.0 91.0 C159.0 93.0 164.3 95.5 168.0 99.0 C171.7 102.5 174.0 104.8 176.0 112.0 C178.0 119.2 178.7 131.3 180.0 142.0 C181.3 152.7 182.7 165.3 184.0 176.0 C185.3 186.7 186.3 195.7 188.0 206.0 C189.7 216.3 192.2 228.7 194.0 238.0 C195.8 247.3 197.2 254.7 199.0 262.0 C200.8 269.3 203.7 275.7 205.0 282.0 C206.3 288.3 207.8 296.0 207.0 300.0 C206.2 304.0 202.0 307.3 200.0 306.0 C198.0 304.7 196.7 298.3 195.0 292.0 C193.3 285.7 191.8 277.0 190.0 268.0 C188.2 259.0 186.2 248.0 184.0 238.0 C181.8 228.0 179.3 219.0 177.0 208.0 C174.7 197.0 172.3 183.7 170.0 172.0 C167.7 160.3 165.2 146.0 163.0 138.0 C160.8 130.0 158.0 126.3 157.0 124.0 C156.3 128.3 154.2 141.0 153.0 150.0 C151.8 159.0 151.2 167.3 150.0 178.0 C148.8 188.7 145.7 201.3 146.0 214.0 C146.3 226.7 150.0 242.7 152.0 254.0 C154.0 265.3 157.0 269.3 158.0 282.0 C159.0 294.7 158.7 315.0 158.0 330.0 C157.3 345.0 155.2 360.7 154.0 372.0 C152.8 383.3 151.5 389.3 151.0 398.0 C150.5 406.7 150.7 415.0 151.0 424.0 C151.3 433.0 153.3 442.0 153.0 452.0 C152.7 462.0 150.3 475.0 149.0 484.0 C147.7 493.0 145.3 499.3 145.0 506.0 C144.7 512.7 146.2 518.3 147.0 524.0 C147.8 529.7 151.3 536.3 150.0 540.0 C148.7 543.7 142.2 546.0 139.0 546.0 C135.8 546.0 132.3 544.3 131.0 540.0 C129.7 535.7 131.0 526.3 131.0 520.0 C131.0 513.7 131.0 510.3 131.0 502.0 C131.0 493.7 131.5 480.3 131.0 470.0 C130.5 459.7 128.3 452.0 128.0 440.0 C127.7 428.0 129.0 412.7 129.0 398.0 C129.0 383.3 128.7 366.0 128.0 352.0 C127.3 338.0 126.3 324.3 125.0 314.0 C123.7 303.7 120.8 294.0 120.0 290.0" />
+                <path class="corpo__linha" transform="translate(240 0) scale(-1 1)" d="M129 62 C129.2 64.7 128.5 73.8 130.0 78.0 C131.5 82.2 134.0 84.8 138.0 87.0 C142.0 89.2 149.0 89.0 154.0 91.0 C159.0 93.0 164.3 95.5 168.0 99.0 C171.7 102.5 174.0 104.8 176.0 112.0 C178.0 119.2 178.7 131.3 180.0 142.0 C181.3 152.7 182.7 165.3 184.0 176.0 C185.3 186.7 186.3 195.7 188.0 206.0 C189.7 216.3 192.2 228.7 194.0 238.0 C195.8 247.3 197.2 254.7 199.0 262.0 C200.8 269.3 203.7 275.7 205.0 282.0 C206.3 288.3 207.8 296.0 207.0 300.0 C206.2 304.0 202.0 307.3 200.0 306.0 C198.0 304.7 196.7 298.3 195.0 292.0 C193.3 285.7 191.8 277.0 190.0 268.0 C188.2 259.0 186.2 248.0 184.0 238.0 C181.8 228.0 179.3 219.0 177.0 208.0 C174.7 197.0 172.3 183.7 170.0 172.0 C167.7 160.3 165.2 146.0 163.0 138.0 C160.8 130.0 158.0 126.3 157.0 124.0 C156.3 128.3 154.2 141.0 153.0 150.0 C151.8 159.0 151.2 167.3 150.0 178.0 C148.8 188.7 145.7 201.3 146.0 214.0 C146.3 226.7 150.0 242.7 152.0 254.0 C154.0 265.3 157.0 269.3 158.0 282.0 C159.0 294.7 158.7 315.0 158.0 330.0 C157.3 345.0 155.2 360.7 154.0 372.0 C152.8 383.3 151.5 389.3 151.0 398.0 C150.5 406.7 150.7 415.0 151.0 424.0 C151.3 433.0 153.3 442.0 153.0 452.0 C152.7 462.0 150.3 475.0 149.0 484.0 C147.7 493.0 145.3 499.3 145.0 506.0 C144.7 512.7 146.2 518.3 147.0 524.0 C147.8 529.7 151.3 536.3 150.0 540.0 C148.7 543.7 142.2 546.0 139.0 546.0 C135.8 546.0 132.3 544.3 131.0 540.0 C129.7 535.7 131.0 526.3 131.0 520.0 C131.0 513.7 131.0 510.3 131.0 502.0 C131.0 493.7 131.5 480.3 131.0 470.0 C130.5 459.7 128.3 452.0 128.0 440.0 C127.7 428.0 129.0 412.7 129.0 398.0 C129.0 383.3 128.7 366.0 128.0 352.0 C127.3 338.0 126.3 324.3 125.0 314.0 C123.7 303.7 120.8 294.0 120.0 290.0" />
+              </g>
+            </svg>
+        <button type="button" class="ponto" data-ponto data-trat="coluna" data-abre="coluna" tabindex="-1" aria-hidden="true" style="left: 50.00%; top: 13.93%">
+          <span class="ponto__halo"></span><span class="ponto__miolo"></span>
+          <span class="ponto__rotulo ponto__rotulo--dir">Cervical</span>
+        </button>
+        <button type="button" class="ponto" data-ponto data-trat="ombro" data-abre="ombro" tabindex="-1" aria-hidden="true" style="left: 36.11%; top: 18.57%">
+          <span class="ponto__halo"></span><span class="ponto__miolo"></span>
+          <span class="ponto__rotulo ponto__rotulo--esq">Ombro</span>
+        </button>
+        <button type="button" class="ponto" data-ponto data-trat="coluna" data-abre="coluna" tabindex="-1" aria-hidden="true" style="left: 50.00%; top: 31.43%">
+          <span class="ponto__halo"></span><span class="ponto__miolo"></span>
+          <span class="ponto__rotulo ponto__rotulo--esq">Coluna</span>
+        </button>
+        <button type="button" class="ponto" data-ponto data-trat="fraturas" data-abre="fraturas" tabindex="-1" aria-hidden="true" style="left: 28.06%; top: 46.79%">
+          <span class="ponto__halo"></span><span class="ponto__miolo"></span>
+          <span class="ponto__rotulo ponto__rotulo--esq">Punho</span>
+        </button>
+        <button type="button" class="ponto" data-ponto data-trat="esporte" data-abre="esporte" tabindex="-1" aria-hidden="true" style="left: 55.83%; top: 60.00%">
+          <span class="ponto__halo"></span><span class="ponto__miolo"></span>
+          <span class="ponto__rotulo ponto__rotulo--dir">Coxa (adutor)</span>
+        </button>
+        <button type="button" class="ponto" data-ponto data-trat="joelho" data-abre="joelho" tabindex="-1" aria-hidden="true" style="left: 44.72%; top: 71.07%">
+          <span class="ponto__halo"></span><span class="ponto__miolo"></span>
+          <span class="ponto__rotulo ponto__rotulo--esq">Joelho (LCA)</span>
+        </button>
+        <button type="button" class="ponto" data-ponto data-trat="fraturas" data-abre="fraturas" tabindex="-1" aria-hidden="true" style="left: 54.72%; top: 90.36%">
+          <span class="ponto__halo"></span><span class="ponto__miolo"></span>
+          <span class="ponto__rotulo ponto__rotulo--dir">Tornozelo</span>
+        </button>
+          </div>
 
-        <div class="mt-8 grid gap-3 md:mt-10 lg:grid-cols-2 lg:items-start lg:gap-4">
+          <div class="reveal grid gap-3 sm:grid-cols-2 lg:col-span-7" aria-label="Regiões e situações">
+          <a href="#trat-joelho" class="card-regiao" data-card data-trat="joelho" data-abre="joelho">
+            <span class="card-regiao__num" aria-hidden="true">1</span>
+            <span><span class="card-regiao__titulo">Joelho e LCA</span><span class="card-regiao__sub">Pré e pós-operatório</span></span>
+          </a>
+          <a href="#trat-ombro" class="card-regiao" data-card data-trat="ombro" data-abre="ombro">
+            <span class="card-regiao__num" aria-hidden="true">2</span>
+            <span><span class="card-regiao__titulo">Ombro</span><span class="card-regiao__sub">Manguito rotador e lesões</span></span>
+          </a>
+          <a href="#trat-fraturas" class="card-regiao" data-card data-trat="fraturas" data-abre="fraturas">
+            <span class="card-regiao__num" aria-hidden="true">3</span>
+            <span><span class="card-regiao__titulo">Fraturas</span><span class="card-regiao__sub">Tornozelo, perna e punho</span></span>
+          </a>
+          <a href="#trat-coluna" class="card-regiao" data-card data-trat="coluna" data-abre="coluna">
+            <span class="card-regiao__num" aria-hidden="true">4</span>
+            <span><span class="card-regiao__titulo">Coluna e cervical</span><span class="card-regiao__sub">Dor no pescoço e nas costas</span></span>
+          </a>
+          <a href="#trat-idoso" class="card-regiao" data-card data-trat="idoso" data-abre="idoso">
+            <span class="card-regiao__num" aria-hidden="true">5</span>
+            <span><span class="card-regiao__titulo">Idoso e quedas</span><span class="card-regiao__sub">Equilíbrio e força</span></span>
+          </a>
+          <a href="#trat-musculacao" class="card-regiao" data-card data-trat="musculacao" data-abre="musculacao">
+            <span class="card-regiao__num" aria-hidden="true">6</span>
+            <span><span class="card-regiao__titulo">Musculação terapêutica</span><span class="card-regiao__sub">Exercício orientado</span></span>
+          </a>
+          <a href="#trat-esporte" class="card-regiao" data-card data-trat="esporte" data-abre="esporte">
+            <span class="card-regiao__num" aria-hidden="true">7</span>
+            <span><span class="card-regiao__titulo">Retorno ao esporte</span><span class="card-regiao__sub">Para atletas</span></span>
+          </a>
+          <a href="https://wa.me/5583988849429" class="card-regiao card-regiao--extra" data-wa-texto="Olá! Não encontrei o meu caso no site e gostaria de conversar sobre ele.">
+            <span class="card-regiao__num" aria-hidden="true">?</span>
+            <span><span class="card-regiao__titulo">Não achou o seu caso?</span><span class="card-regiao__sub">Pergunte no WhatsApp</span></span>
+          </a>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-3 md:mt-16 lg:grid-cols-2 lg:items-start lg:gap-4">
           <details id="trat-joelho" name="tratamento" class="acordeao reveal">
             <summary>
               <span>
@@ -524,7 +598,7 @@
         </div>
 
         <div class="reveal">
-          <h2 id="titulo-sobre" class="text-3xl font-extrabold leading-tight text-ink sm:text-4xl lg:text-[2.85rem]">
+          <h2 id="titulo-sobre" class="text-3xl font-normal leading-tight text-ink sm:text-4xl lg:text-[2.85rem]">
             Quem é <span class="text-turq">Taisa Tamara</span>
           </h2>
           <p class="mt-5 text-[0.95rem] leading-relaxed text-ink-muted">
@@ -546,7 +620,7 @@
             <li class="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-lagoon">Pratica musculação</li>
           </ul>
 
-          <h3 class="mt-8 text-sm font-extrabold uppercase tracking-wider text-turq">Formação</h3>
+          <h3 class="mt-8 text-sm font-sans font-bold uppercase tracking-wider text-turq">Formação</h3>
           <ul class="mt-3 space-y-2 text-sm leading-relaxed text-ink-muted">
             <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" aria-hidden="true"></span><span>[Graduação em Fisioterapia, 2009]</span></li>
             <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" aria-hidden="true"></span><span>Atuação em Traumato-ortopedia e em Fisioterapia do Esporte desde 2014</span></li>
@@ -577,7 +651,7 @@
 
       <div class="container-site relative">
         <div class="max-w-2xl">
-          <h2 id="titulo-processo" class="reveal text-3xl font-extrabold text-ink sm:text-4xl lg:text-5xl">
+          <h2 id="titulo-processo" class="reveal text-3xl font-normal text-ink sm:text-4xl lg:text-5xl">
             Seu tratamento em <span class="text-turq">3 passos</span>
           </h2>
           <p class="reveal mt-4 text-[0.95rem] leading-relaxed text-ink-muted">
@@ -588,7 +662,7 @@
         <ol class="relative mt-10 grid gap-5 md:mt-14 md:grid-cols-3">
           <li class="reveal relative flex flex-col rounded-card bg-paper p-6 shadow-soft">
             <span class="grid h-11 w-11 place-items-center rounded-full bg-lagoon text-sm font-extrabold text-aqua">01</span>
-            <h3 class="mt-5 text-lg font-extrabold text-ink">Avaliação detalhada</h3>
+            <h3 class="mt-5 text-lg font-normal text-ink">Avaliação detalhada</h3>
             <p class="mt-2 text-sm leading-relaxed text-ink-muted">
               A primeira consulta levanta sua queixa, seu histórico e sua rotina para
               identificar a causa do problema.
@@ -597,7 +671,7 @@
 
           <li class="reveal relative flex flex-col rounded-card bg-paper p-6 shadow-soft">
             <span class="grid h-11 w-11 place-items-center rounded-full bg-lagoon text-sm font-extrabold text-aqua">02</span>
-            <h3 class="mt-5 text-lg font-extrabold text-ink">Plano personalizado</h3>
+            <h3 class="mt-5 text-lg font-normal text-ink">Plano personalizado</h3>
             <p class="mt-2 text-sm leading-relaxed text-ink-muted">
               As técnicas manuais, os exercícios e as metas são definidos de acordo
               com o seu diagnóstico e com o tempo que você tem.
@@ -606,7 +680,7 @@
 
           <li class="reveal relative flex flex-col rounded-card bg-paper p-6 shadow-soft">
             <span class="grid h-11 w-11 place-items-center rounded-full bg-lagoon text-sm font-extrabold text-aqua">03</span>
-            <h3 class="mt-5 text-lg font-extrabold text-ink">Acompanhamento contínuo</h3>
+            <h3 class="mt-5 text-lg font-normal text-ink">Acompanhamento contínuo</h3>
             <p class="mt-2 text-sm leading-relaxed text-ink-muted">
               O progresso é reavaliado a cada etapa, o plano é ajustado e você recebe
               orientação para manter o resultado em casa.
@@ -631,7 +705,7 @@
     <section id="depoimentos" aria-labelledby="titulo-depoimentos" class="bg-paper py-14 md:py-20">
       <div class="container-site">
         <div class="flex flex-wrap items-end justify-between gap-4">
-          <h2 id="titulo-depoimentos" class="reveal text-3xl font-extrabold text-ink sm:text-4xl lg:text-5xl">
+          <h2 id="titulo-depoimentos" class="reveal text-3xl font-normal text-ink sm:text-4xl lg:text-5xl">
             O que dizem os <span class="text-turq">pacientes</span>
           </h2>
 
@@ -703,7 +777,7 @@
     <section id="duvidas" aria-labelledby="titulo-duvidas" class="bg-mist py-14 md:py-20">
       <div class="container-site grid gap-8 lg:grid-cols-12 lg:gap-12">
         <div class="lg:col-span-4">
-          <h2 id="titulo-duvidas" class="reveal text-3xl font-extrabold text-ink sm:text-4xl lg:text-5xl">
+          <h2 id="titulo-duvidas" class="reveal text-3xl font-normal text-ink sm:text-4xl lg:text-5xl">
             Dúvidas <span class="text-turq">frequentes</span>
           </h2>
           <p class="reveal mt-4 text-[0.95rem] leading-relaxed text-ink-muted">
@@ -806,7 +880,7 @@
     <!-- ══════════════════ CHAMADA FINAL ══════════════════ -->
     <section aria-labelledby="titulo-cta" class="container-site pb-14 md:pb-20">
       <div class="reveal rounded-card bg-lagoon px-6 py-10 text-center md:px-12 md:py-14">
-        <h2 id="titulo-cta" class="text-2xl font-extrabold text-paper sm:text-4xl">
+        <h2 id="titulo-cta" class="text-2xl font-normal text-paper sm:text-4xl">
           Pronto para <span class="text-aqua">voltar a se mover</span> sem dor?
         </h2>
         <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-paper/70 sm:text-base">
@@ -824,15 +898,12 @@
       <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
 
         <div class="lg:col-span-1">
-          <div class="flex items-center gap-2.5">
-            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-aqua text-lagoon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" fill="currentColor" class="h-5 w-5">
-                <rect x="4" y="7" width="24" height="3.6" rx="1.8" />
-                <rect x="8.4" y="7" width="3.6" height="12" rx="1.8" />
-                <rect x="20" y="7" width="3.6" height="18" rx="1.8" />
-              </svg>
+          <div class="marca">
+            <svg class="marca__folhas" aria-hidden="true"><use href="#folhas" /></svg>
+            <span>
+              <span class="marca__nome">Taisa Tamara</span>
+              <span class="marca__sub">Fisioterapia avançada</span>
             </span>
-            <span class="text-base font-extrabold">Taisa Tamara</span>
           </div>
           <p class="mt-4 text-sm leading-relaxed text-paper/70">
             Fisioterapia para atletas, traumato-ortopedia e pós-operatório de
@@ -842,7 +913,7 @@
         </div>
 
         <div>
-          <h2 class="text-sm font-extrabold uppercase tracking-wider text-aqua">Contato</h2>
+          <h2 class="text-sm font-sans font-bold uppercase tracking-wider text-aqua">Contato</h2>
           <ul class="mt-2 text-sm text-paper/70">
             <li><a href="tel:+5583988849429" class="inline-flex min-h-11 items-center transition hover:text-paper">(83) 98884-9429</a></li>
             <li><a href="https://wa.me/5583988849429" class="inline-flex min-h-11 items-center transition hover:text-paper">WhatsApp: (83) 98884-9429</a></li>
@@ -851,7 +922,7 @@
         </div>
 
         <div>
-          <h2 class="text-sm font-extrabold uppercase tracking-wider text-aqua">Consultório</h2>
+          <h2 class="text-sm font-sans font-bold uppercase tracking-wider text-aqua">Consultório</h2>
           <address class="mt-4 text-sm not-italic leading-relaxed text-paper/70">
             Avenida Senador Ruy Carneiro, 300<br />
             Trade Office Center, sala 401<br />
@@ -862,7 +933,7 @@
         </div>
 
         <div>
-          <h2 class="text-sm font-extrabold uppercase tracking-wider text-aqua">Horários</h2>
+          <h2 class="text-sm font-sans font-bold uppercase tracking-wider text-aqua">Horários</h2>
           <dl class="mt-4 space-y-2 text-sm text-paper/70">
             <div class="flex justify-between gap-4"><dt>Segunda a sexta</dt><dd class="font-semibold text-paper">[08h às 18h]</dd></div>
             <div class="flex justify-between gap-4"><dt>Sábado</dt><dd class="font-semibold text-paper">[08h às 12h]</dd></div>

@@ -1,5 +1,5 @@
 /**
- * "Onde dói?": os botões de região abrem o tratamento correspondente.
+ * "Onde dói?": os cartões e os pontos do corpo abrem o tratamento correspondente.
  * O acordeão em si é um <details> e abre e fecha sozinho. Este módulo só liga
  * os botões a ele e abre o item certo quando a URL chega com #trat-...
  */
@@ -18,7 +18,7 @@ function abrir(id: string): void {
 }
 
 export function iniciarTratamentos(): void {
-  document.querySelectorAll<HTMLAnchorElement>('[data-abre]').forEach((botao) => {
+  document.querySelectorAll<HTMLElement>('[data-abre]').forEach((botao) => {
     botao.addEventListener('click', (evento) => {
       const alvo = botao.dataset.abre;
       if (!alvo) return;

@@ -33,11 +33,11 @@ provisórios e onde trocar cada um.
 index.html              todo o conteúdo e a marcação do site
 src/config.ts           número de WhatsApp usado pelo formulário
 src/styles/main.css     cores, tipografia e componentes (Tailwind v4)
-src/modules/            comportamento: menu, formulário, carrossel, tratamentos, animações
+src/modules/            comportamento: menu, formulário, carrossel, mapa do corpo, tratamentos, animações
 public/imagens/         fotos do site, veja o LEIA-ME de lá
 ```
 
 ## Stack
 
-Vite, TypeScript e Tailwind CSS v4. Sem framework de interface: o HTML é direto,
+Vite, TypeScript e Tailwind CSS v4. Fontes: Marcellus e DM Sans, pelo Google Fonts. Sem framework de interface: o HTML é direto,
 então mudar um texto não exige saber programar.

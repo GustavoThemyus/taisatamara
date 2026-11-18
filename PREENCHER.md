@@ -5,7 +5,8 @@ marcado com `[colchetes]` no `index.html`. Procure por `[` com Ctrl+F.
 
 ## Já preenchido
 
-- Nome, nome completo e o monograma TT da marca
+- Nome, nome completo e o logo das duas folhas, com o nome em Marcellus
+- Fontes da referência: Marcellus nos títulos e DM Sans no texto
 - Telefone e WhatsApp: (83) 98884-9429
 - Instagram: [@taisatamarafisio_](https://www.instagram.com/taisatamarafisio_/)
 - Experiência: o site mostra "15+ anos". A bio do Instagram dela diz 17 anos,
@@ -14,8 +15,8 @@ marcado com `[colchetes]` no `index.html`. Procure por `[` com Ctrl+F.
   cirurgias faciais, reabilitação funcional e Conceito Mulligan
 - Consultório: Avenida Senador Ruy Carneiro, 300, Trade Office Center, sala 401,
   Miramar, João Pessoa/PB, CEP 58032-101, com link do Google Maps
-- Seção "Onde dói?" com 7 tratamentos e botão de WhatsApp em cada um (rascunho,
-  veja "Revisar com a Taisa" abaixo)
+- Seção "Onde dói?" com mapa do corpo, 7 tratamentos e botão de WhatsApp em cada
+  um (rascunho, veja "Revisar com a Taisa" abaixo)
 - Dúvidas frequentes, com 7 respostas escritas (rascunho, mesma revisão)
 - Texto do "Quem é Taisa Tamara" e as etiquetas
 - As duas fotos dela, no topo da página e na seção Sobre
@@ -26,7 +27,7 @@ do formulário escritos na mensagem.
 ## Falta
 
 ### 1. CREFITO
-`[CREFITO 00000-F]`, no cabeçalho e no rodapé. É o registro profissional. Num
+`[CREFITO 00000-F]`, no rodapé. É o registro profissional. Num
 site de saúde ele pesa bastante na confiança de quem não conhece ela.
 
 ### 2. E-mail
@@ -79,8 +80,8 @@ musculação terapêutica e esporte. Vale perguntar a ela principalmente:
   aparecem na bio dela, só no site de referência.
 - As etapas de cada tratamento descrevem o jeito dela de trabalhar?
 
-Para tirar um tratamento, apague o bloco `<details id="trat-...">` dele e o botão
-correspondente em "Onde dói?".
+Para tirar um tratamento, apague o bloco `<details id="trat-...">` dele, o cartão
+numerado correspondente e, se houver, os pontos do corpo com o mesmo `data-trat`.
 
 ### Dúvidas frequentes
 Oito perguntas. Duas precisam de dado dela:
@@ -91,9 +92,12 @@ Oito perguntas. Duas precisam de dado dela:
 As respostas sobre exames e sobre a cirurgia de LCA também merecem uma leitura
 dela, por serem orientações de saúde.
 
-### Onde o site de referência diverge do nosso
-Mantive o que você definiu. A referência diz endereço no bairro da Torre e 17
-anos de atuação. O nosso mostra o consultório de Miramar e "15+ anos".
+## Logo
+
+O logo (as duas folhas) foi copiado em SVG do site de referência e fica como um
+`<symbol id="folhas">` no começo do `index.html`. Se a Taisa tiver o arquivo
+original do logo, vale trocar esse símbolo por ele. O favicon
+(`public/favicon.svg`) usa as mesmas folhas.
 
 ## Como rodar o site
 

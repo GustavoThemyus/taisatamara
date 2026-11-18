@@ -17,7 +17,8 @@
   --color-ink: #0f2226;
   --color-ink-muted: #4f6a70;
 
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Marcellus", Georgia, "Times New Roman", serif;
 
   --radius-card: 1.5rem;
   --radius-field: 0.75rem;
@@ -49,7 +50,9 @@
   }
 
   h1, h2, h3 {
-    letter-spacing: -0.03em;
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
     text-wrap: balance;
   }
 
@@ -269,34 +272,6 @@
 }
 
 @layer components {
-  /* Botões de região do "Onde dói?": alvo de toque de 44px */
-  .chip-regiao {
-    display: inline-flex;
-    align-items: center;
-    min-height: 2.75rem;
-    padding: 0.5rem 1.125rem;
-    border: 1px solid var(--color-aqua-soft);
-    border-radius: 9999px;
-    background-color: var(--color-paper);
-    color: var(--color-lagoon);
-    font-size: 0.9375rem;
-    font-weight: 600;
-    transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
-  }
-
-  .chip-regiao:hover {
-    border-color: var(--color-lagoon);
-    background-color: var(--color-lagoon);
-    color: var(--color-paper);
-  }
-
-  .chip-regiao--extra {
-    border-style: dashed;
-    border-color: var(--color-turq);
-    background-color: transparent;
-    color: var(--color-turq);
-  }
-
   /* Acordeão feito com <details>: abre e fecha sem JavaScript */
   .acordeao {
     border-radius: var(--radius-card);
@@ -368,5 +343,227 @@
     display: block;
     font-weight: 700;
     color: var(--color-ink);
+  }
+}
+
+@layer components {
+  /* Logo: duas folhas e o nome em Marcellus, como no material da Taisa */
+  .marca {
+    display: flex;
+    align-items: center;
+    gap: 0.6875rem;
+    color: var(--color-paper);
+  }
+
+  .marca__folhas {
+    width: 2.125rem;
+    height: 2.125rem;
+    flex: none;
+    color: var(--color-aqua);
+  }
+
+  .marca__nome {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .marca__sub {
+    display: block;
+    margin-top: 0.3125rem;
+    font-size: 0.5rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-aqua-soft);
+  }
+
+  @media (min-width: 640px) {
+    .marca__nome {
+      font-size: 1.3125rem;
+    }
+
+    .marca__sub {
+      font-size: 0.59rem;
+      letter-spacing: 0.34em;
+    }
+  }
+}
+
+@layer components {
+  /* Mapa do corpo: o desenho é SVG, os pontos e rótulos são HTML por cima */
+  .mapa-corpo {
+    position: relative;
+  }
+
+  .mapa-corpo svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .corpo__fundo {
+    fill: color-mix(in srgb, var(--color-turq) 7%, transparent);
+  }
+
+  .corpo__linha {
+    fill: none;
+    stroke: var(--color-turq);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-width 300ms ease, filter 300ms ease;
+  }
+
+  /* Idoso e Musculação não têm uma região: acende o corpo inteiro */
+  .mapa-corpo[data-corpo-todo="true"] .corpo__linha {
+    stroke-width: 2.6;
+    filter: drop-shadow(0 0 6px var(--color-aqua));
+  }
+
+  .ponto {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 9999px;
+    background: none;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+  }
+
+  .ponto__miolo {
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid var(--color-paper);
+    border-radius: 9999px;
+    background-color: var(--color-turq);
+  }
+
+  .ponto__halo {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 9999px;
+    background-color: var(--color-aqua);
+    animation: pulso 2.8s ease-out infinite;
+  }
+
+  .ponto__rotulo {
+    position: absolute;
+    top: 50%;
+    padding: 0.3125rem 0.75rem;
+    border-radius: 9999px;
+    background-color: var(--color-lagoon);
+    color: var(--color-paper);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: opacity 180ms ease;
+  }
+
+  .ponto__rotulo--dir {
+    left: calc(50% + 0.875rem);
+  }
+
+  .ponto__rotulo--esq {
+    right: calc(50% + 0.875rem);
+  }
+
+  .ponto.is-ativo .ponto__rotulo {
+    opacity: 1;
+  }
+
+  .ponto.is-ativo .ponto__halo {
+    animation-duration: 1.4s;
+  }
+
+  .ponto.is-ativo .ponto__miolo {
+    background-color: var(--color-lagoon);
+  }
+
+  @keyframes pulso {
+    0% {
+      opacity: 0.55;
+      transform: scale(0.9);
+    }
+    70%, 100% {
+      opacity: 0;
+      transform: scale(2.6);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ponto__halo {
+      animation: none;
+      opacity: 0.35;
+      transform: scale(1.6);
+    }
+  }
+
+  /* Cartões das regiões, numerados como na referência */
+  .card-regiao {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    min-height: 4.25rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-aqua-soft);
+    border-radius: 1rem;
+    background-color: color-mix(in srgb, var(--color-paper) 75%, transparent);
+    text-align: left;
+    transition: border-color 150ms ease, background-color 150ms ease;
+  }
+
+  .card-regiao:hover,
+  .card-regiao.is-ativo {
+    border-color: var(--color-turq);
+    background-color: color-mix(in srgb, var(--color-aqua-soft) 45%, var(--color-paper));
+  }
+
+  .card-regiao--extra {
+    border-style: dashed;
+  }
+
+  .card-regiao__num {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--color-aqua-soft);
+    border-radius: 9999px;
+    background-color: var(--color-paper);
+    color: var(--color-lagoon);
+    font-family: var(--font-display);
+    font-size: 1.0625rem;
+  }
+
+  .card-regiao__titulo {
+    display: block;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-ink);
+  }
+
+  .card-regiao__sub {
+    display: block;
+    margin-top: 0.125rem;
+    font-size: 0.8125rem;
+    line-height: 1.3;
+    color: var(--color-ink-muted);
   }
 }

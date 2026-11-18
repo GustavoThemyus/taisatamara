@@ -2,6 +2,7 @@ import { aplicarLinksWhatsapp, iniciarFormulario } from './modules/booking-form'
 import { iniciarDepoimentos } from './modules/testimonials';
 import { iniciarNavegacao } from './modules/nav';
 import { iniciarReveal } from './modules/reveal';
+import { iniciarMapaCorpo } from './modules/body-map';
 import { iniciarTratamentos } from './modules/treatments';
 
 function iniciar(): void {
@@ -10,6 +11,7 @@ function iniciar(): void {
   aplicarLinksWhatsapp();
   iniciarDepoimentos();
   iniciarTratamentos();
+  iniciarMapaCorpo();
   iniciarReveal();
 
   const ano = document.querySelector<HTMLElement>('[data-ano]');
