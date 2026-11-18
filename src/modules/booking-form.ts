@@ -15,7 +15,6 @@ const CAMPOS: Campo[] = [
   { nome: 'nome', rotulo: 'Nome', obrigatorio: true },
   { nome: 'email', rotulo: 'E-mail', obrigatorio: true },
   { nome: 'telefone', rotulo: 'Telefone', obrigatorio: true },
-  { nome: 'data', rotulo: 'Data e hora', obrigatorio: true },
   { nome: 'mensagem', rotulo: 'Mensagem', obrigatorio: false },
 ];
 
@@ -32,16 +31,6 @@ function validar(campo: Campo, valor: string): string | null {
   return null;
 }
 
-/** "2026-10-28T14:30" → "28/10/2026 às 14:30" */
-function formatarDataHora(valor: string): string {
-  const data = new Date(valor);
-  if (Number.isNaN(data.getTime())) return valor;
-
-  const dia = data.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
-  const hora = data.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-  return `${dia} às ${hora}`;
-}
-
 function montarMensagem(dados: FormData): string {
   const linhas = [
     SAUDACAO_WHATSAPP,
@@ -49,7 +38,6 @@ function montarMensagem(dados: FormData): string {
     `*Nome:* ${String(dados.get('nome') ?? '').trim()}`,
     `*E-mail:* ${String(dados.get('email') ?? '').trim()}`,
     `*Telefone:* ${String(dados.get('telefone') ?? '').trim()}`,
-    `*Preferência de horário:* ${formatarDataHora(String(dados.get('data') ?? ''))}`,
   ];
 
   const mensagem = String(dados.get('mensagem') ?? '').trim();
