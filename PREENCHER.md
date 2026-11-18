@@ -57,17 +57,19 @@ de resultado. Mesmo assim ela precisa ler tudo antes de publicar, porque descrev
 o que ela faz na prática.
 
 ### Formação
-Na seção "Quem é Taisa Tamara", entre colchetes porque os anos e cursos vieram
-do site de referência e não foram confirmados:
+Na seção "Quem é Taisa Tamara". Os itens abaixo ainda estão entre colchetes
+porque vieram do site de referência e não foram confirmados:
 
 - `[Graduação em Fisioterapia, 2009]`
-- `[Especialização em Traumato-ortopedia e Fisioterapia do Esporte, 2014]`
 - `[Capacitação em Conceito Mulligan]`
 - `[Capacitação em bandagem funcional]`
 - `[Curso de terapia manual]`
 - `[Atuação em reumatologia]`
 
 Confirme cada item e apague os colchetes. O que ela não tiver, apague a linha.
+
+Já confirmados e sem colchetes: "Atuação em Traumato-ortopedia e em Fisioterapia
+do Esporte desde 2014" e "Atuação na área de Musculação Terapêutica".
 
 ### Tratamentos
 Sete itens: joelho e LCA, ombro, fraturas, coluna e cervical, idoso e quedas,
