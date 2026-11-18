@@ -17,3 +17,7 @@ export const SAUDACAO_WHATSAPP = 'Olá! Gostaria de agendar uma consulta de fisi
 
 /** true quando o número está num formato que o wa.me aceita. */
 export const whatsappConfigurado = (): boolean => /^\d{12,13}$/.test(WHATSAPP);
+
+/** Link do WhatsApp com a mensagem já escrita. */
+export const linkWhatsapp = (texto: string): string =>
+  `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;

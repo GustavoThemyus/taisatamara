@@ -51,8 +51,9 @@
         <ul class="flex items-center gap-1 rounded-full bg-lagoon-soft/60 p-1" data-nav-list>
           <li><a href="#inicio" class="block rounded-full px-4 py-2 text-sm font-semibold text-paper/80 transition hover:text-paper aria-[current=true]:bg-lagoon aria-[current=true]:text-paper">Início</a></li>
           <li><a href="#servicos" class="block rounded-full px-4 py-2 text-sm font-semibold text-paper/80 transition hover:text-paper aria-[current=true]:bg-lagoon aria-[current=true]:text-paper">Atuação</a></li>
+          <li><a href="#tratamentos" class="block rounded-full px-4 py-2 text-sm font-semibold text-paper/80 transition hover:text-paper aria-[current=true]:bg-lagoon aria-[current=true]:text-paper">Tratamentos</a></li>
           <li><a href="#sobre" class="block rounded-full px-4 py-2 text-sm font-semibold text-paper/80 transition hover:text-paper aria-[current=true]:bg-lagoon aria-[current=true]:text-paper">Sobre</a></li>
-          <li><a href="#depoimentos" class="block rounded-full px-4 py-2 text-sm font-semibold text-paper/80 transition hover:text-paper aria-[current=true]:bg-lagoon aria-[current=true]:text-paper">Depoimentos</a></li>
+          <li><a href="#duvidas" class="block rounded-full px-4 py-2 text-sm font-semibold text-paper/80 transition hover:text-paper aria-[current=true]:bg-lagoon aria-[current=true]:text-paper">Dúvidas</a></li>
           <li><a href="#contato" class="block rounded-full px-4 py-2 text-sm font-semibold text-paper/80 transition hover:text-paper aria-[current=true]:bg-lagoon aria-[current=true]:text-paper">Contato</a></li>
         </ul>
       </nav>
@@ -64,7 +65,7 @@
               <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" />
             </svg>
           </span>
-          <span class="hidden text-sm font-bold sm:inline">(83) 98884-9429</span>
+          <span class="hidden whitespace-nowrap text-sm font-bold sm:inline lg:hidden xl:inline">(83) 98884-9429</span>
         </a>
 
         <button
@@ -84,7 +85,7 @@
   </header>
 
   <!-- Menu em gaveta no celular -->
-  <div id="menu-mobile" data-menu-panel hidden class="fixed inset-0 z-[55] bg-lagoon lg:hidden">
+  <div id="menu-mobile" data-menu-panel hidden class="fixed inset-0 z-[55] overflow-y-auto bg-lagoon lg:hidden">
     <div class="container-site flex h-16 items-center justify-end">
       <button type="button" data-menu-close class="grid h-11 w-11 place-items-center rounded-full bg-lagoon-soft/60 text-paper">
         <span class="sr-only">Fechar menu</span>
@@ -97,9 +98,11 @@
       <ul class="flex flex-col gap-1 text-paper">
         <li><a href="#inicio" class="block border-b border-paper/10 py-4 text-2xl font-bold">Início</a></li>
         <li><a href="#servicos" class="block border-b border-paper/10 py-4 text-2xl font-bold">Áreas de atuação</a></li>
+        <li><a href="#tratamentos" class="block border-b border-paper/10 py-4 text-2xl font-bold">Tratamentos</a></li>
         <li><a href="#sobre" class="block border-b border-paper/10 py-4 text-2xl font-bold">Sobre</a></li>
         <li><a href="#processo" class="block border-b border-paper/10 py-4 text-2xl font-bold">Como funciona</a></li>
         <li><a href="#depoimentos" class="block border-b border-paper/10 py-4 text-2xl font-bold">Depoimentos</a></li>
+        <li><a href="#duvidas" class="block border-b border-paper/10 py-4 text-2xl font-bold">Dúvidas</a></li>
         <li><a href="#contato" class="block py-4 text-2xl font-bold">Contato</a></li>
       </ul>
       <a href="#agendar" class="btn-solid mt-8 w-full bg-aqua text-lagoon">Agendar consulta</a>
@@ -121,10 +124,16 @@
             Recupere sua mobilidade<br class="hidden sm:block" />
             e viva <span class="text-aqua">sem dor.</span>
           </h1>
-          <p class="order-2 max-w-md text-[0.95rem] leading-relaxed text-paper/70 lg:order-1 lg:col-span-4 lg:text-base">
-            São mais de 15 anos de fisioterapia, com atendimento a atletas,
-            traumato-ortopedia e pós-operatório de cirurgias faciais.
-          </p>
+          <div class="order-2 lg:order-1 lg:col-span-4">
+            <p class="max-w-md text-[0.95rem] leading-relaxed text-paper/70 lg:text-base">
+              São mais de 15 anos de fisioterapia, com atendimento a atletas,
+              traumato-ortopedia e pós-operatório de cirurgias faciais.
+            </p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="rounded-full border border-paper/25 px-3 py-1.5 text-xs font-semibold text-paper/90">Traumato-ortopedia e esporte</li>
+              <li class="rounded-full border border-paper/25 px-3 py-1.5 text-xs font-semibold text-paper/90">Miramar, João Pessoa</li>
+            </ul>
+          </div>
         </div>
 
         <div class="mt-8 grid gap-8 lg:mt-12 lg:grid-cols-12 lg:items-end lg:gap-6">
@@ -289,6 +298,216 @@
       </div>
     </section>
 
+    <!-- ══════════════════ ONDE DÓI E TRATAMENTOS ══════════════════ -->
+    <section id="tratamentos" aria-labelledby="titulo-tratamentos" class="bg-mist py-14 md:py-20">
+      <div class="container-site">
+        <div class="max-w-2xl">
+          <h2 id="titulo-tratamentos" class="reveal text-3xl font-extrabold text-ink sm:text-4xl lg:text-5xl">
+            Onde <span class="text-turq">dói?</span>
+          </h2>
+          <p class="reveal mt-4 text-[0.95rem] leading-relaxed text-ink-muted">
+            Toque na região para ver como é o tratamento.
+          </p>
+        </div>
+
+        <ul class="reveal mt-6 flex flex-wrap gap-2.5 md:mt-8" aria-label="Regiões do corpo">
+          <li><a class="chip-regiao" href="#trat-coluna" data-abre="coluna">Cervical</a></li>
+          <li><a class="chip-regiao" href="#trat-ombro" data-abre="ombro">Ombro</a></li>
+          <li><a class="chip-regiao" href="#trat-coluna" data-abre="coluna">Coluna</a></li>
+          <li><a class="chip-regiao" href="#trat-fraturas" data-abre="fraturas">Punho</a></li>
+          <li><a class="chip-regiao" href="#trat-esporte" data-abre="esporte">Coxa (adutor)</a></li>
+          <li><a class="chip-regiao" href="#trat-joelho" data-abre="joelho">Joelho (LCA)</a></li>
+          <li><a class="chip-regiao" href="#trat-fraturas" data-abre="fraturas">Tornozelo</a></li>
+          <li><a class="chip-regiao chip-regiao--extra" href="https://wa.me/5583988849429" data-wa-texto="Olá! Não encontrei o meu caso no site e gostaria de conversar sobre ele.">Não achou o seu caso?</a></li>
+        </ul>
+
+        <div class="mt-8 grid gap-3 md:mt-10 lg:grid-cols-2 lg:items-start lg:gap-4">
+          <details id="trat-joelho" name="tratamento" class="acordeao reveal">
+            <summary>
+              <span>
+                <span class="block text-lg font-extrabold leading-snug text-ink">Joelho e LCA</span>
+                <span class="mt-0.5 block text-xs font-semibold text-ink-muted">Pré e pós-operatório</span>
+              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Acompanhamento antes e depois da cirurgia do ligamento cruzado anterior e de outras lesões do joelho. O ritmo segue o protocolo do cirurgião.</p>
+              <ol class="etapas mt-4">
+            <li><span><strong>Pós-operatório imediato</strong>Controle da dor e do inchaço e primeiros movimentos do joelho.</span></li>
+            <li><span><strong>Amplitude e marcha</strong>Recuperação do movimento e de uma caminhada sem compensações.</span></li>
+            <li><span><strong>Fortalecimento</strong>Ganho de força da coxa e do quadril, com carga aumentada aos poucos.</span></li>
+            <li><span><strong>Retorno às atividades</strong>Preparo para voltar ao trabalho, ao treino ou ao esporte.</span></li>
+              </ol>
+              <a href="https://wa.me/5583988849429" data-wa-texto="Olá! Gostaria de saber mais sobre: joelho e LCA." class="btn-pill mt-5">
+                Falar sobre isso no WhatsApp
+                <span class="btn-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </span>
+              </a>
+            </div>
+          </details>
+
+          <details id="trat-ombro" name="tratamento" class="acordeao reveal">
+            <summary>
+              <span>
+                <span class="block text-lg font-extrabold leading-snug text-ink">Ombro</span>
+                <span class="mt-0.5 block text-xs font-semibold text-ink-muted">Manguito rotador e lesão labral</span>
+              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Tratamento para dor e perda de movimento no ombro, como as lesões do manguito rotador e do lábio articular.</p>
+              <ol class="etapas mt-4">
+            <li><span><strong>Avaliação</strong>Testes de movimento e de força para entender de onde vem a dor.</span></li>
+            <li><span><strong>Alívio e mobilidade</strong>Técnicas manuais e exercícios para reduzir a dor e soltar o movimento.</span></li>
+            <li><span><strong>Força e controle</strong>Fortalecimento do ombro e da escápula para o dia a dia ou para o esporte.</span></li>
+              </ol>
+              <a href="https://wa.me/5583988849429" data-wa-texto="Olá! Gostaria de saber mais sobre: ombro." class="btn-pill mt-5">
+                Falar sobre isso no WhatsApp
+                <span class="btn-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </span>
+              </a>
+            </div>
+          </details>
+
+          <details id="trat-fraturas" name="tratamento" class="acordeao reveal">
+            <summary>
+              <span>
+                <span class="block text-lg font-extrabold leading-snug text-ink">Fraturas</span>
+                <span class="mt-0.5 block text-xs font-semibold text-ink-muted">Tornozelo, perna e punho</span>
+              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Reabilitação depois da retirada do gesso ou da fixação cirúrgica de fraturas no tornozelo, na perna e no punho.</p>
+              <ol class="etapas mt-4">
+            <li><span><strong>Mobilidade</strong>Recuperar o movimento da articulação e diminuir a rigidez.</span></li>
+            <li><span><strong>Apoio e marcha</strong>Voltar a apoiar o peso e a caminhar com segurança, quando o médico liberar.</span></li>
+            <li><span><strong>Força e equilíbrio</strong>Fortalecer o membro e treinar o equilíbrio.</span></li>
+              </ol>
+              <a href="https://wa.me/5583988849429" data-wa-texto="Olá! Gostaria de saber mais sobre: fraturas." class="btn-pill mt-5">
+                Falar sobre isso no WhatsApp
+                <span class="btn-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </span>
+              </a>
+            </div>
+          </details>
+
+          <details id="trat-coluna" name="tratamento" class="acordeao reveal">
+            <summary>
+              <span>
+                <span class="block text-lg font-extrabold leading-snug text-ink">Coluna e cervical</span>
+                <span class="mt-0.5 block text-xs font-semibold text-ink-muted">Dor no pescoço e nas costas</span>
+              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Tratamento da dor no pescoço e nas costas com terapia manual, incluindo o Conceito Mulligan, e exercícios.</p>
+              <ol class="etapas mt-4">
+            <li><span><strong>Avaliação</strong>Postura, movimento e rotina, para achar o que sobrecarrega a coluna.</span></li>
+            <li><span><strong>Terapia manual</strong>Mobilização para reduzir a dor e ganhar movimento.</span></li>
+            <li><span><strong>Exercício</strong>Fortalecimento e orientações para manter o resultado no dia a dia.</span></li>
+              </ol>
+              <a href="https://wa.me/5583988849429" data-wa-texto="Olá! Gostaria de saber mais sobre: coluna e cervical." class="btn-pill mt-5">
+                Falar sobre isso no WhatsApp
+                <span class="btn-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </span>
+              </a>
+            </div>
+          </details>
+
+          <details id="trat-idoso" name="tratamento" class="acordeao reveal">
+            <summary>
+              <span>
+                <span class="block text-lg font-extrabold leading-snug text-ink">Idoso e quedas</span>
+                <span class="mt-0.5 block text-xs font-semibold text-ink-muted">Equilíbrio, força e autonomia</span>
+              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Trabalho de equilíbrio e força para quem quer se mover com mais segurança e manter a independência.</p>
+              <ol class="etapas mt-4">
+            <li><span><strong>Avaliação</strong>Equilíbrio, força e forma de caminhar.</span></li>
+            <li><span><strong>Treino funcional</strong>Exercícios ligados a levantar, caminhar e subir escadas.</span></li>
+            <li><span><strong>Orientação</strong>Ajustes na casa e na rotina para reduzir o risco de queda.</span></li>
+              </ol>
+              <a href="https://wa.me/5583988849429" data-wa-texto="Olá! Gostaria de saber mais sobre: idoso e prevenção de quedas." class="btn-pill mt-5">
+                Falar sobre isso no WhatsApp
+                <span class="btn-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </span>
+              </a>
+            </div>
+          </details>
+
+          <details id="trat-musculacao" name="tratamento" class="acordeao reveal">
+            <summary>
+              <span>
+                <span class="block text-lg font-extrabold leading-snug text-ink">Musculação terapêutica</span>
+                <span class="mt-0.5 block text-xs font-semibold text-ink-muted">Exercício com carga, orientado</span>
+              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Exercício com carga, orientado pela fisioterapeuta, como parte da reabilitação.</p>
+              <ol class="etapas mt-4">
+            <li><span><strong>Avaliação</strong>Força, movimento e limitações do momento.</span></li>
+            <li><span><strong>Plano de exercícios</strong>Escolha e progressão das cargas de acordo com a sua lesão.</span></li>
+            <li><span><strong>Acompanhamento</strong>Ajustes conforme o seu corpo responde.</span></li>
+              </ol>
+              <a href="https://wa.me/5583988849429" data-wa-texto="Olá! Gostaria de saber mais sobre: musculação terapêutica." class="btn-pill mt-5">
+                Falar sobre isso no WhatsApp
+                <span class="btn-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </span>
+              </a>
+            </div>
+          </details>
+
+          <details id="trat-esporte" name="tratamento" class="acordeao reveal">
+            <summary>
+              <span>
+                <span class="block text-lg font-extrabold leading-snug text-ink">Esporte</span>
+                <span class="mt-0.5 block text-xs font-semibold text-ink-muted">Retorno ao esporte</span>
+              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Tratamento e retorno ao esporte depois de lesões como a do adutor da coxa e a fascite plantar.</p>
+              <ol class="etapas mt-4">
+            <li><span><strong>Força e potência</strong>Recuperar a força e a potência do membro lesionado.</span></li>
+            <li><span><strong>Pliometria e agilidade</strong>Saltos, mudanças de direção e velocidade, de forma gradual.</span></li>
+            <li><span><strong>Gesto do esporte</strong>Treino específico da modalidade antes da volta à competição.</span></li>
+              </ol>
+              <a href="https://wa.me/5583988849429" data-wa-texto="Olá! Gostaria de saber mais sobre: esporte." class="btn-pill mt-5">
+                Falar sobre isso no WhatsApp
+                <span class="btn-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </span>
+              </a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- ══════════════════ SOBRE ══════════════════ -->
     <section id="sobre" aria-labelledby="titulo-sobre" class="bg-paper py-14 md:py-20">
       <div class="container-site grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
@@ -325,6 +544,16 @@
             <li class="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-lagoon">15+ anos de experiência</li>
             <li class="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-lagoon">Comunicativa</li>
             <li class="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-lagoon">Pratica musculação</li>
+          </ul>
+
+          <h3 class="mt-8 text-sm font-extrabold uppercase tracking-wider text-turq">Formação</h3>
+          <ul class="mt-3 space-y-2 text-sm leading-relaxed text-ink-muted">
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" aria-hidden="true"></span><span>[Graduação em Fisioterapia, 2009]</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" aria-hidden="true"></span><span>[Especialização em Traumato-ortopedia e Fisioterapia do Esporte, 2014]</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" aria-hidden="true"></span><span>[Capacitação em Conceito Mulligan]</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" aria-hidden="true"></span><span>[Capacitação em bandagem funcional]</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" aria-hidden="true"></span><span>[Curso de terapia manual]</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" aria-hidden="true"></span><span>[Atuação em reumatologia]</span></li>
           </ul>
 
           <a href="#agendar" class="btn-pill mt-7">
@@ -466,6 +695,110 @@
         </div>
 
         <div class="container-site mt-2 flex justify-center" data-carousel-dots aria-label="Selecionar depoimento"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ DÚVIDAS FREQUENTES ══════════════════ -->
+    <section id="duvidas" aria-labelledby="titulo-duvidas" class="bg-mist py-14 md:py-20">
+      <div class="container-site grid gap-8 lg:grid-cols-12 lg:gap-12">
+        <div class="lg:col-span-4">
+          <h2 id="titulo-duvidas" class="reveal text-3xl font-extrabold text-ink sm:text-4xl lg:text-5xl">
+            Dúvidas <span class="text-turq">frequentes</span>
+          </h2>
+          <p class="reveal mt-4 text-[0.95rem] leading-relaxed text-ink-muted">
+            Não achou a resposta? Pergunte direto no WhatsApp.
+          </p>
+          <a href="https://wa.me/5583988849429" data-wa-texto="Olá! Tenho uma dúvida sobre o atendimento." class="btn-pill reveal mt-5">
+            Tirar uma dúvida
+            <span class="btn-pill__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">
+                <path d="M7 17 17 7M9 7h8v8" />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="grid gap-3 lg:col-span-8">
+          <details name="duvida" class="acordeao reveal">
+            <summary>
+              <span class="text-base font-extrabold leading-snug text-ink">Como é a primeira consulta?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">É uma avaliação. A Taisa pergunta sobre a sua queixa, o seu histórico e a sua rotina, testa movimento e força e explica o que encontrou. Depois combina com você o plano de tratamento. [Duração da primeira consulta.]</p>
+            </div>
+          </details>
+
+          <details name="duvida" class="acordeao reveal">
+            <summary>
+              <span class="text-base font-extrabold leading-snug text-ink">Preciso levar exames?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Se você tiver exames de imagem, laudos ou o relatório da cirurgia, leve. Ajudam, mas não são obrigatórios para a primeira avaliação.</p>
+            </div>
+          </details>
+
+          <details name="duvida" class="acordeao reveal">
+            <summary>
+              <span class="text-base font-extrabold leading-snug text-ink">Quando começar a fisioterapia depois da cirurgia de LCA?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">O momento e o ritmo dependem do cirurgião e do protocolo do seu caso. Entre em contato antes da cirurgia ou logo depois para alinhar o acompanhamento com a orientação médica.</p>
+            </div>
+          </details>
+
+          <details name="duvida" class="acordeao reveal">
+            <summary>
+              <span class="text-base font-extrabold leading-snug text-ink">Quanto tempo dura o tratamento?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Depende do diagnóstico, da fase da lesão e de como cada pessoa responde. A previsão é dada depois da avaliação e revista ao longo do tratamento.</p>
+            </div>
+          </details>
+
+          <details name="duvida" class="acordeao reveal">
+            <summary>
+              <span class="text-base font-extrabold leading-snug text-ink">O que é musculação terapêutica?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">É o uso de exercício com carga, orientado pela fisioterapeuta, para recuperar força e função depois de uma lesão ou cirurgia. A carga e a progressão seguem o seu quadro, não um treino padrão.</p>
+            </div>
+          </details>
+
+          <details name="duvida" class="acordeao reveal">
+            <summary>
+              <span class="text-base font-extrabold leading-snug text-ink">A Taisa atende atletas?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Sim. O atendimento a atletas é uma das áreas de atuação dela, da prevenção de lesões ao retorno ao esporte.</p>
+            </div>
+          </details>
+
+          <details name="duvida" class="acordeao reveal">
+            <summary>
+              <span class="text-base font-extrabold leading-snug text-ink">Ela atua em cirurgias faciais?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">Sim. Acompanha o pós-operatório de cirurgias do rosto, com foco no controle do inchaço e na recuperação dos movimentos.</p>
+            </div>
+          </details>
+
+          <details name="duvida" class="acordeao reveal">
+            <summary>
+              <span class="text-base font-extrabold leading-snug text-ink">Atende convênio? Quais as formas de pagamento?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="acordeao__seta h-5 w-5 text-turq" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class="acordeao__corpo">
+              <p class="text-sm leading-relaxed text-ink-muted">[Informar convênios aceitos e formas de pagamento.]</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 

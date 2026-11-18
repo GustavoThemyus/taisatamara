@@ -33,7 +33,7 @@ provisórios e onde trocar cada um.
 index.html              todo o conteúdo e a marcação do site
 src/config.ts           número de WhatsApp usado pelo formulário
 src/styles/main.css     cores, tipografia e componentes (Tailwind v4)
-src/modules/            comportamento: menu, formulário, carrossel, animações
+src/modules/            comportamento: menu, formulário, carrossel, tratamentos, animações
 public/imagens/         fotos do site, veja o LEIA-ME de lá
 ```
 

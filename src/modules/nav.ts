@@ -1,6 +1,6 @@
 /** Menu em gaveta no celular, sombra do header ao rolar e link ativo por seção. */
 
-const SECOES = ['inicio', 'servicos', 'sobre', 'processo', 'depoimentos', 'contato'];
+const SECOES = ['inicio', 'servicos', 'tratamentos', 'sobre', 'processo', 'depoimentos', 'duvidas', 'contato'];
 
 function iniciarMenuMobile(): void {
   const abrir = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');

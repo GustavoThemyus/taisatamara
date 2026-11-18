@@ -267,3 +267,106 @@
     }
   }
 }
+
+@layer components {
+  /* Botões de região do "Onde dói?": alvo de toque de 44px */
+  .chip-regiao {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.5rem 1.125rem;
+    border: 1px solid var(--color-aqua-soft);
+    border-radius: 9999px;
+    background-color: var(--color-paper);
+    color: var(--color-lagoon);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+  }
+
+  .chip-regiao:hover {
+    border-color: var(--color-lagoon);
+    background-color: var(--color-lagoon);
+    color: var(--color-paper);
+  }
+
+  .chip-regiao--extra {
+    border-style: dashed;
+    border-color: var(--color-turq);
+    background-color: transparent;
+    color: var(--color-turq);
+  }
+
+  /* Acordeão feito com <details>: abre e fecha sem JavaScript */
+  .acordeao {
+    border-radius: var(--radius-card);
+    background-color: var(--color-paper);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .acordeao > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 3.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-card);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .acordeao > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .acordeao__seta {
+    flex-shrink: 0;
+    transition: transform 200ms ease;
+  }
+
+  .acordeao[open] .acordeao__seta {
+    transform: rotate(180deg);
+  }
+
+  .acordeao__corpo {
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  /* Etapas numeradas dentro de cada tratamento */
+  .etapas {
+    display: grid;
+    gap: 0.875rem;
+    counter-reset: etapa;
+  }
+
+  .etapas > li {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.75rem;
+    align-items: start;
+    counter-increment: etapa;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-ink-muted);
+  }
+
+  .etapas > li::before {
+    content: counter(etapa);
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    background-color: var(--color-lagoon);
+    color: var(--color-aqua);
+    font-size: 0.75rem;
+    font-weight: 800;
+  }
+
+  .etapas strong {
+    display: block;
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+}

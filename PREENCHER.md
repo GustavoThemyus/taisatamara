@@ -14,6 +14,9 @@ marcado com `[colchetes]` no `index.html`. Procure por `[` com Ctrl+F.
   cirurgias faciais, reabilitação funcional e Conceito Mulligan
 - Consultório: Avenida Senador Ruy Carneiro, 300, Trade Office Center, sala 401,
   Miramar, João Pessoa/PB, CEP 58032-101, com link do Google Maps
+- Seção "Onde dói?" com 7 tratamentos e botão de WhatsApp em cada um (rascunho,
+  veja "Revisar com a Taisa" abaixo)
+- Dúvidas frequentes, com 7 respostas escritas (rascunho, mesma revisão)
 - Texto do "Quem é Taisa Tamara" e as etiquetas
 - As duas fotos dela, no topo da página e na seção Sobre
 
@@ -44,6 +47,51 @@ seção do ar do que deixá-la com texto de exemplo.
 `[URL da imagem de compartilhamento, 1200x630px]`. É a miniatura que aparece
 quando o link é mandado no WhatsApp ou no Instagram. Sem ela, o link vai sem
 imagem nenhuma. Veja [public/imagens/LEIA-ME.md](public/imagens/LEIA-ME.md).
+
+## Revisar com a Taisa
+
+Estes textos foram escritos a partir de um site de referência feito por uma
+agência (oDomain), que se apresenta como prévia não oficial. Eu reescrevi com
+palavras próprias e de forma conservadora, sem prazo de recuperação nem promessa
+de resultado. Mesmo assim ela precisa ler tudo antes de publicar, porque descreve
+o que ela faz na prática.
+
+### Formação
+Na seção "Quem é Taisa Tamara", entre colchetes porque os anos e cursos vieram
+do site de referência e não foram confirmados:
+
+- `[Graduação em Fisioterapia, 2009]`
+- `[Especialização em Traumato-ortopedia e Fisioterapia do Esporte, 2014]`
+- `[Capacitação em Conceito Mulligan]`
+- `[Capacitação em bandagem funcional]`
+- `[Curso de terapia manual]`
+- `[Atuação em reumatologia]`
+
+Confirme cada item e apague os colchetes. O que ela não tiver, apague a linha.
+
+### Tratamentos
+Sete itens: joelho e LCA, ombro, fraturas, coluna e cervical, idoso e quedas,
+musculação terapêutica e esporte. Vale perguntar a ela principalmente:
+
+- Ela atende mesmo idosos e prevenção de quedas? Esse item e o de fraturas não
+  aparecem na bio dela, só no site de referência.
+- As etapas de cada tratamento descrevem o jeito dela de trabalhar?
+
+Para tirar um tratamento, apague o bloco `<details id="trat-...">` dele e o botão
+correspondente em "Onde dói?".
+
+### Dúvidas frequentes
+Oito perguntas. Duas precisam de dado dela:
+
+- `[Duração da primeira consulta.]`
+- `[Informar convênios aceitos e formas de pagamento.]`
+
+As respostas sobre exames e sobre a cirurgia de LCA também merecem uma leitura
+dela, por serem orientações de saúde.
+
+### Onde o site de referência diverge do nosso
+Mantive o que você definiu. A referência diz endereço no bairro da Torre e 17
+anos de atuação. O nosso mostra o consultório de Miramar e "15+ anos".
 
 ## Como rodar o site
 

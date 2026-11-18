@@ -3,7 +3,7 @@
  * mensagem já escrita. Não há backend: o contato acontece na conversa.
  */
 
-import { SAUDACAO_WHATSAPP, WHATSAPP, whatsappConfigurado } from '../config';
+import { SAUDACAO_WHATSAPP, WHATSAPP, linkWhatsapp, whatsappConfigurado } from '../config';
 
 interface Campo {
   nome: string;
@@ -109,7 +109,7 @@ export function iniciarFormulario(): void {
     }
 
     limparAviso();
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(montarMensagem(dados))}`, '_blank', 'noopener');
+    window.open(linkWhatsapp(montarMensagem(dados)), '_blank', 'noopener');
 
     sucesso.textContent = 'Pronto! Abrimos o WhatsApp com os seus dados. É só enviar a mensagem.';
     sucesso.hidden = false;
@@ -126,5 +126,11 @@ export function aplicarLinksWhatsapp(): void {
 
   document.querySelectorAll<HTMLAnchorElement>(`a[href*="${WHATSAPP}"], a[href*="[55DDDNUMERO]"]`).forEach((link) => {
     link.href = link.href.replace(/%5B55DDDNUMERO%5D|\[55DDDNUMERO\]/, WHATSAPP);
+  });
+
+  // Botões com mensagem própria, como "Falar sobre isso" em cada tratamento
+  document.querySelectorAll<HTMLAnchorElement>('a[data-wa-texto]').forEach((link) => {
+    const texto = link.dataset.waTexto;
+    if (texto) link.href = linkWhatsapp(texto);
   });
 }
