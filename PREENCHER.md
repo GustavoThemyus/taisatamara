@@ -26,17 +26,10 @@ do formulário escritos na mensagem.
 
 ## Falta
 
-### 1. CREFITO
-`[CREFITO 00000-F]`, no rodapé. É o registro profissional. Num
-site de saúde ele pesa bastante na confiança de quem não conhece ela.
+### 1. Horário de sábado e domingo
+O rodapé mostra só segunda a sexta (7h30 às 12h e 14h às 18h). Se ela atende no fim de semana, acrescente as linhas.
 
-### 2. E-mail
-`[email@exemplo.com]`, no rodapé.
-
-### 3. Horários de atendimento
-`[08h às 18h]`, `[08h às 12h]`, `[Fechado]`. Os valores atuais são chute.
-
-### 4. Depoimentos
+### 2. Depoimentos
 `[Depoimento 1/2/3]`, `[Nome do Paciente]` e `[Tratamento realizado]`.
 
 Peça autorização por escrito antes de publicar o nome de um paciente. E prefira
