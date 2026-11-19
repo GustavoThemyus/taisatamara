@@ -37,7 +37,7 @@ depoimento específico: "voltei a subir escada em 6 semanas" convence mais que
 "excelente profissional". Se ainda não tiver nenhum, me avise. É melhor tirar a
 seção do ar do que deixá-la com texto de exemplo.
 
-### 5. Imagem de compartilhamento
+### 3. Imagem de compartilhamento
 `[URL da imagem de compartilhamento, 1200x630px]`. É a miniatura que aparece
 quando o link é mandado no WhatsApp ou no Instagram. Sem ela, o link vai sem
 imagem nenhuma. Veja [public/imagens/LEIA-ME.md](public/imagens/LEIA-ME.md).
